@@ -1,0 +1,187 @@
+.home-header-container {
+  height: 65px;
+  width: 100%;
+  padding: 0 40px; // khoang cach 2 ben
+
+  .home-header-content {
+    width: 100%;
+    height: 100%;
+    display: flex; // tren cung 1 hang ngang
+
+    .left-content {
+      width: 20%;
+      display: flex;
+      align-items: center; // can giua trong div trên dưới
+      // border: 1px solid green;
+      .header-logo {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        transform: scale(0.5, 0.5);
+        margin-left: -60px;
+      }
+      i {
+        font-size: 25px;
+        color: grey;
+        cursor: pointer;
+      }
+    }
+    .center-content {
+      width: 55%;
+      // border: 1px solid orange;
+      display: flex;
+      justify-content: space-between; // căn khoang cach voi nhau
+      align-items: center;
+
+      .child-content {
+        .subs-title {
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+    .right-content {
+      width: 25%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      // border: 1px solid rgb(151, 146, 223);
+
+      .support {
+        padding-right: 35px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        i {
+          font-size: 15px;
+          margin-right: 5px;
+        }
+      }
+      .language-vi {
+        cursor: pointer;
+        opacity: 0.2;
+        &.active {
+          opacity: 1;
+          span {
+            color: orange;
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .language-en {
+        margin: 0 10px;
+        cursor: pointer;
+        opacity: 0.2;
+        &.active {
+          opacity: 1;
+          span {
+            color: blue;
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.home-header-banner {
+  background: url("../../assets/bg.jpg");
+
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; //
+  .content-up {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(255, 255, 255, 0.1)
+    );
+    // border: 1px solid red;
+    padding-top: 15px;
+    height: 65%;
+    .title1 {
+      text-align: center;
+      font-size: 38px;
+      text-shadow: 1px 1px 1px #333; //tạo bóng sau chữ
+      margin-bottom: 5px; // căn dưới
+      color: white;
+      margin-top: 30px; // căn trên
+    }
+    .title2 {
+      text-align: center;
+      font-size: 38px;
+      text-shadow: 1px 1px 1px #333;
+      color: white;
+      margin-bottom: 15px;
+    }
+    .search {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 25px;
+      background: #f7d800;
+      i {
+        margin: 0 5px;
+      }
+      input {
+        height: 34px;
+        width: 450px;
+        background: transparent; // background trong suốt
+        border: none; // ko viền
+        outline: none; //ko viền khi nhấn vào
+      }
+    }
+  }
+  .content-down {
+    // border: 1px solid green($color: #000000);
+    height: 35%;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 1)
+    );
+    .options {
+      text-align: center;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      .option-child {
+        // border: 1px solid red;
+        width: 125px;
+        .icon-child {
+          background: white;
+          width: 40px;
+          height: 40px;
+          padding: 10px;
+          border-radius: 50%;
+          text-align: center;
+          margin: 0 auto;
+          i {
+            font-size: 20px;
+            color: #49bce2;
+          }
+        }
+        .text-child {
+          font-size: 17px;
+          font-weight: 500;
+          cursor: pointer;
+          &:hover {
+            color: #49bce2;
+          }
+        }
+      }
+    }
+  }
+}

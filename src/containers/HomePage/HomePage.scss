@@ -1,0 +1,122 @@
+//reset slick slider css
+.slick-prev {
+  // border: 1px solid orange !important;
+  left: -10px !important;
+  z-index: 1000 !important;
+  height: 48px !important;
+  width: 44px !important;
+
+  background: #fff !important;
+  border: 2px solid #d7d7d7 !important;
+
+  &:hover {
+    background: #fefbfb !important;
+  }
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: FontAwesome !important;
+  color: red !important;
+  // content: "\f060" !important;
+}
+.slick-next {
+  // border: 1px solid red !important;
+  right: -10px !important;
+  height: 48px !important;
+  width: 44px !important;
+  background: #fff !important;
+  border: 2px solid #d7d7d7 !important;
+
+  &:hover {
+    background: #fefbfb !important;
+  }
+}
+
+.section-share {
+  &.section-specialty {
+    background: #f5f5f5;
+  }
+
+  &.section-outstanding-doctor {
+    background: #f5f5f5;
+  }
+
+  .section-body {
+    .section-customize {
+      .bg-image {
+        width: 323px;
+        height: 165px;
+        background-color: #eee;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &.section-specialty {
+          background-image: url("../../assets/specialty/co-xuong-khop.png");
+        }
+        &.section-medical-facility {
+          background-image: url("../../assets/medical-facility/benh-vien-DN.webp");
+        }
+        &.section-outstanding-doctor {
+          background-image: url("../../assets/outstanding-doctor/bacsi.jfif");
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+        }
+        &.section-HandBook {
+          background-image: url("../../assets/handbook/cam-nang.png");
+        }
+      }
+    }
+  }
+}
+
+.section-share {
+  height: 330px;
+
+  .section-container {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+
+    .section-header {
+      height: 60px;
+      margin-bottom: 25px;
+      padding-top: 25px;
+      .title-section {
+        font-size: 22px;
+        font-weight: 600; // in đậm
+      }
+      .btn-section {
+        float: right; // sang phải
+        padding: 10px 15px;
+        border: none;
+        outline: none;
+        display: block;
+        background: #ebebeb;
+        color: black;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+          background: #f7d800;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.section-outstanding-doctor {
+  .outer-bg {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .section-customize {
+    padding: 5px;
+    .customize-boder {
+      border: 1px solid #dddada;
+      padding: 20px;
+    }
+  }
+}
