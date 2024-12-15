@@ -13,9 +13,7 @@ import {
 import { path } from "../utils";
 
 import Home from "../routes/Home";
-// import Login from "../routes/Login";
 import Login from "./Auth/Login";
-import Header from "./Header/Header";
 import System from "../routes/System";
 import HomePage from "./HomePage/HomePage";
 import { CustomToastCloseButton } from "../components/CustomToast";
@@ -46,8 +44,6 @@ class App extends Component {
       <Fragment>
         <Router history={history}>
           <div className="main-container">
-            {/* props: kiểm tra có login hay không, nếu đã login => render ra header của ứng dụng*/}
-            {this.props.isLoggedIn && <Header />}
             <div className="content-container">
               <CustomScrollbars style={{ height: "100vh", width: "100%" }}>
                 <Switch>
