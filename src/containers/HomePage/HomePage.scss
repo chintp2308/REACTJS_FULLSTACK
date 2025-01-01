@@ -31,7 +31,10 @@
     background: #fefbfb !important;
   }
 }
-
+//làm mất dấu chuyển ngang đầu và cuối
+.slick-disabled {
+  display: none !important;
+}
 .section-share {
   &.section-specialty {
     background: #f5f5f5;
@@ -63,7 +66,7 @@
           background-image: url("../../assets/medical-facility/benh-vien-DN.webp");
         }
         &.section-outstanding-doctor {
-          background-image: url("../../assets/outstanding-doctor/bacsi.jfif");
+          // background-image: url("../../assets/outstanding-doctor/bacsi.jfif");
           width: 120px;
           height: 120px;
           border-radius: 50%;
@@ -119,6 +122,8 @@
   }
   .section-customize {
     padding: 5px;
+    cursor: pointer;
+
     .customize-boder {
       border: 1px solid #dddada;
       padding: 20px;
