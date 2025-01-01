@@ -1,0 +1,24 @@
+.manage-schedule-container {
+  .m-s-title {
+    text-transform: uppercase; //viết in hoa
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .pick-hour-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .btn-schedule {
+      border: 1px solid rgb(168, 165, 165);
+      padding: 5px 15px;
+    }
+  }
+  .btn-save-schedule {
+    margin-top: 20px;
+  }
+}
