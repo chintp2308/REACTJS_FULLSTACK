@@ -129,10 +129,18 @@ class ManageSchedule extends Component {
       doctorId: selectedDoctor.value,
       formattedDate: formattedDate,
     });
+
+    if (res && res.errCode === 0) {
+      toast.success("Save Infor succeed! ");
+    } else {
+      toast.error("error createBulkCreateSchedule ");
+      console.log("error createBulkCreateSchedule >>> res: ", res);
+    }
   };
   render() {
     let { language } = this.props;
     let { rangeTime } = this.state;
+    let yesterday = new Date(new Date().setDate(new Date().getDate() - 1)); //để có thể chọn lịch ngày hôm nay
     return (
       <div className="manage-schedule-container">
         <div className="m-s-title">
@@ -162,7 +170,7 @@ class ManageSchedule extends Component {
                 className="form-control"
                 value={this.state.currentDate}
                 // selected={this.state.currentDate}
-                minDate={new Date()}
+                minDate={yesterday}
               />
             </div>
             <div className="col-12 pick-hour-container">
