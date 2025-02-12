@@ -32,12 +32,20 @@ class ManageDoctor extends Component {
       listPrice: [],
       listPayment: [],
       listProvince: [],
+      listClinic: [],
+      listSpecialty: [],
+
       selectedPrice: "",
       selectedPayment: "",
       selectedProvince: "",
+      selectedClinic: "",
+      selectedSpecialty: "",
+
       nameClinic: "",
       addressClinic: "",
       note: "",
+      clinicId: "",
+      specialtyId: "",
     };
   }
 
@@ -80,6 +88,16 @@ class ManageDoctor extends Component {
           result.push(object);
         });
       }
+
+      if (type === "SPECIALTY") {
+        inputData.map((item, index) => {
+          let object = {};
+
+          object.label = item.name;
+          object.value = item.id;
+          result.push(object);
+        });
+      }
     }
     return result;
   };
@@ -98,7 +116,7 @@ class ManageDoctor extends Component {
     if (
       prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor
     ) {
-      let { resPayment, resPrice, resProvince } =
+      let { resPayment, resPrice, resProvince, resSpecialty } =
         this.props.allRequiredDoctorInfor;
       let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
       let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT");
@@ -106,11 +124,16 @@ class ManageDoctor extends Component {
         resProvince,
         "PROVINCE"
       );
+      let dataSelectSpecialty = this.buildDataInputSelect(
+        resSpecialty,
+        "SPECIALTY"
+      );
 
       this.setState({
         listPrice: dataSelectPrice,
         listPayment: dataSelectPayment,
         listProvince: dataSelectProvince,
+        listSpecialty: dataSelectSpecialty,
       });
     }
     if (prevProps.language !== this.props.language) {
@@ -246,7 +269,7 @@ class ManageDoctor extends Component {
     });
   };
   render() {
-    let { hasOldData } = this.state;
+    let { hasOldData, listSpecialty } = this.state;
     return (
       <div className="manage-doctor-container">
         <div className="manage-doctor-title">
@@ -364,15 +387,32 @@ class ManageDoctor extends Component {
             />
           </div>
         </div>
-
+        <div className="row">
+          <div className="col-4 form-group">
+            <label>Chọn chuyên khoa</label>
+            <Select
+              // value={this.state.selectedOption}
+              // onChange={this.handleChangeSelect}
+              options={this.state.listSpecialty}
+              placeholder={
+                <FormattedMessage id="admin.manage-doctor.seletc-doctor" />
+              }
+            />
+          </div>
+          <div className="col-4 form-group">
+            <label>Chọn phòng khám</label>
+            <input className="form-control" />
+          </div>
+        </div>
         <div className="manage-doctor-editor">
           <MdEditor
-            style={{ height: "500px" }}
+            style={{ height: "300px" }}
             renderHTML={(text) => mdParser.render(text)}
             onChange={this.handleEditorChange}
             value={this.state.contentMarkdown}
           />
         </div>
+
         <button
           onClick={() => this.handleSaveContentMarkdown()}
           className={

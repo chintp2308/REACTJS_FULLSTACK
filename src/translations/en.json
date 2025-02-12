@@ -56,7 +56,8 @@
   },
   "homepage": {
     "outstanding-doctor": "Last week's featured doctor",
-    "more-infor": "See more"
+    "more-infor": "See more",
+    "specialty-popular": "Popular specialties"
   },
   "manage-schedule": {
     "title": "Manage your doctor's appointment schedule",

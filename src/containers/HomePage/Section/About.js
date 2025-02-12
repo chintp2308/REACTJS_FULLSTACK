@@ -21,7 +21,7 @@ class About extends Component {
               title="#0 Tại Sao Lại Chọn Website Developer | Những Điều Bạn Cần Biết Để Dấn Thân Vào Con Đường Này"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
           </div>
